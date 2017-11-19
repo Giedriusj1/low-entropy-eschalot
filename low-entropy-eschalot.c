@@ -127,8 +127,8 @@ main(int argc, char *argv[])
 	min_unique_characters = strtol(argv[1], NULL, 10);
 	min_repeating_chains = strtol(argv[2], NULL, 10);
 
-	pthread_t	babies[THREADS];
-	uint64_t	count[THREADS];
+	pthread_t	babies[THREADS+1];
+	uint64_t	count[THREADS+1];
 	unsigned int	i = 0;
 
 	pthread_mutex_init(&printresult_lock, NULL);
